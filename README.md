@@ -71,8 +71,8 @@ It demonstrates how to build REST APIs with proper structure, exception handling
 ```json
 {
   "id": 1,
-  "name": "Tejas",
-  "email": "tejas@gmail.com"
+  "name": "ABC",
+  "email": "abc@gmail.com"
 }
 ```
 

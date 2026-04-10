@@ -1,5 +1,6 @@
 package com.tejas.demo;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
@@ -17,7 +18,7 @@ public class UserController {
     }
 
     @PostMapping
-    public String addUser(@RequestBody User user){
+    public String addUser(@Valid @RequestBody User user){
         users.add(user);
         return "User Added Successfully.";
     }

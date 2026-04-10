@@ -1,8 +1,13 @@
 package com.tejas.demo;
+import jakarta.validation.constraints.*;
 
 public class User {
         private int id;
+
+        @NotBlank(message = "Name cannot be empty")
         private String name;
+
+        @NotBlank(message = "Email cannot be empty")
         private String email;
 
         public User() { }

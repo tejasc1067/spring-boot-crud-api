@@ -43,7 +43,7 @@ It demonstrates how to build REST APIs with proper structure, exception handling
 1. Clone the repository
 
    ```bash
-   git clone <your-repo-link>
+   git clone https://github.com/tejasc1067/spring-boot-crud-api.git
    ```
 
 2. Open in IntelliJ / VS Code

@@ -55,4 +55,17 @@ public class UserController {
         }
         throw new UserNotFoundException("User not found to delete with id: "+id);
     }
+    @GetMapping("v1")
+    public List<User> getUsersV1(){
+        return users;
+    }
+
+    @GetMapping("v2")
+    public List<UserV2> getUsersV2(){
+        List<UserV2> result = new ArrayList<>();
+        for(User user : users){
+            result.add(new UserV2(user.getName(), user.getEmail()));
+        }
+        return result;
+    }
 }

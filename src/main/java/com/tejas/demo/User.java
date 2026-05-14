@@ -8,6 +8,7 @@ public class User {
         private String name;
 
         @NotBlank(message = "Email cannot be empty")
+        @Email(message = "Email must be a valid email address")
         private String email;
 
         public User() { }

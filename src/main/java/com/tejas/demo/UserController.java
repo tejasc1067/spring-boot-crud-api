@@ -47,11 +47,9 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public String deleteUser(@PathVariable int id){
-        for (User user : users){
-            if (user.getId() == id){
-                users.remove(user);
-                return "User Deleted Successfully";
-            }
+        boolean removed = users.removeIf(user -> user.getId() == id);
+        if (removed) {
+            return "User Deleted Successfully";
         }
         throw new UserNotFoundException("User not found to delete with id: "+id);
     }
